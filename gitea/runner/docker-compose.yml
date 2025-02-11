@@ -1,0 +1,14 @@
+services:
+  runner:
+    image: gitea/act_runner:latest
+    environment:
+      CONFIG_FILE: /config.yaml
+      GITEA_INSTANCE_URL: "http://localhost:3000/"
+      GITEA_RUNNER_REGISTRATION_TOKEN: "uewz9ZwFV9y05YUpm4YcNzFX16KtmLmWnX83wFYI"
+      GITEA_RUNNER_NAME: "LOCAL_GITEA_RUNNER"
+      GITEA_RUNNER_LABELS: "LOCAL"
+    volumes:
+      - ./config.yaml:/config.yaml
+      - ./data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: host

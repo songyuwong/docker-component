@@ -1,0 +1,11 @@
+services:
+  server:
+    image: redis/redisinsight:latest
+    container_name: redisinsight
+    volumes:
+      - ./data:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: host
+    ports:
+      - "5540:5540"

@@ -1,0 +1,13 @@
+services:
+  nacos-server:
+    image: nacos/nacos-server:latest
+    container_name: nacos
+    # 不能去除 env 指定，貌似这个镜像不行
+    env_file:
+      - .env
+    volumes:
+      - ./standalone-logs/:/home/nacos/logs
+    restart: always
+    cap_add:
+      - SYS_NICE
+    network_mode: host

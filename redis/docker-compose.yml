@@ -1,0 +1,10 @@
+services:
+  redis:
+    container_name: redis
+    image: redis
+    command: ["redis-server", "--save", "60", "1", "--loglevel", "warning"]
+    volumes:
+      - ./data:/data
+    network_mode: host
+    cap_add:
+      - SYS_NICE

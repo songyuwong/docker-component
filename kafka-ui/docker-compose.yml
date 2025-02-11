@@ -1,0 +1,12 @@
+services:
+  kafka-ui:
+    container_name: kafka-ui
+    image: provectuslabs/kafka-ui:latest
+    environment:
+      DYNAMIC_CONFIG_ENABLED: 'true'
+      DYNAMIC_CONFIG_PATH: /etc/kafkaui/dynamic_config.yaml
+    volumes:
+      - ./config.yaml:/etc/kafkaui/dynamic_config.yaml
+    network_mode: host
+    cap_add:
+      - SYS_NICE

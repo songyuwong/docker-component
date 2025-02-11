@@ -1,0 +1,15 @@
+auth:
+  type: DISABLED
+kafka:
+  clusters:
+  - bootstrapServers: 192.168.101.41:9094
+    name: jhdcp-new:dev
+    properties: {}
+    readOnly: false
+  - bootstrapServers: 192.168.101.180:9092
+    name: jhdcp-new:test
+    properties: {}
+    readOnly: false
+rbac:
+  roles: []
+webclient: {}

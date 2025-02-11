@@ -1,0 +1,10 @@
+services:
+  sentinel:
+    image: sentinel-dashboard:latest
+    container_name: sentinel-dashboard
+    environment:
+      - PORT:33333
+    network_mode: host
+    volumes:
+    - ./:/app
+    - /etc/localtime:/etc/localtime

@@ -1,0 +1,18 @@
+services:
+  web:
+    image: nginx:latest
+    container_name: nginx
+    env_file:
+      - .env
+    volumes:
+      - ./conf.d/:/etc/nginx/conf.d/
+      - ./fastcgi_params:/etc/nginx/fastcgi_params
+      - ./mime.types:/etc/nginx/mime.types
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./scgi_params:/etc/nginx/scgi_params
+      - ./uwsgi_params:/etc/nginx/uwsgi_params
+      - ./logs:/var/log/nginx
+      - ./dist:/app/site/site-fe/dist
+    cap_add:
+      - SYS_NICE
+    network_mode: host
