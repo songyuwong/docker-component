@@ -1,5 +1,8 @@
 nginx/dist/*
 nginx/logs/*
+nginx/**/*.key
+nginx/**/*.crt
+nginx/**/*.csr
 mysql/data/*
 nacos/standalone-logs/*
 redis/insight/data/*
