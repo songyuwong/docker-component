@@ -1,0 +1,6 @@
+nginx/dist/*
+nginx/logs/*
+mysql/data/*
+nacos/standalone-logs/*
+redis/insight/data/*
+redis/data/*
