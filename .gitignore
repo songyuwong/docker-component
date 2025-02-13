@@ -7,4 +7,8 @@ mysql/data/*
 nacos/standalone-logs/*
 redis/insight/data/*
 redis/data/*
-elasticsearch/data0*/*
+elasticsearch/esdata*
+elasticsearch/eslogs*
+elasticsearch/plugins
+elasticsearch/kibanadata
+elasticsearch/certs
