@@ -12,3 +12,4 @@ elasticsearch/eslogs*
 elasticsearch/plugins
 elasticsearch/kibanadata
 elasticsearch/certs
+nacos-no-auth/data/*

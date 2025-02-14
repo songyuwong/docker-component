@@ -1,0 +1,11 @@
+services:
+  nacos:
+    image: nacos/nacos-server:${NACOS_VERSION} # ${NACOS_VERSION} 替换为你想要部署的Nacos版本号
+    container_name: nacos-no-auth
+    environment:
+      - MODE=standalone # 指定为单机模式
+      # 其他环境变量如需鉴权可参照Nacos文档添加
+    ports:
+      - "9048:8848"
+    volumes:
+      - ./data/:/home/nacos/data # 挂载数据目录以持久化数据
