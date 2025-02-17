@@ -14,3 +14,4 @@ elasticsearch/kibanadata
 elasticsearch/certs
 nacos-no-auth/data/*
 minio/data/*
+jenkins/jenkins_home/*
